@@ -3,3 +3,45 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  min-height: 100vh;
+}
+nav {
+  display: flex;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 30px;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #38aad5;
+  font-family: "Dosis";
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: "Dosis";
+  color: #33474f;
+  margin-left: 20px;
+}
+#logo-end {
+  font-weight: 400;
+}
+#cta-small {
+  background-color: #33474f;
+  border: none;
+  border-radius: 30px;
+  width: 200px;
+  padding: 10px;
+  font-family: "Dosis";
+  color: white;
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin: 40px;
+}
