@@ -1,8 +1,6 @@
 # edutechsmart-landingpage
 
-# 🚀 Edutechsmart – Landingpage
-
-## 📌 Projektplanering
+## Projektplanering
 
 ### Mål
 - En sida som väcker nyfikenhet och intresse hos besökare, oavsett om det är en kund eller en potentiell användare.  
@@ -11,35 +9,35 @@
 
 ---
 
-## 📋 Backlog & planerade features
+## Backlog & planerade features
 👉 Se [Project Board](https://github.com/users/FiorellaDiGiulio/projects/2)  
 
 ---
 
 ## 🎨 Färgpalett
--  #33474F` – Text  
--  #427E94`  
--  #1D9FCF`  
--  #38AAD5`  
--  #8ECFE7`  
--  #F1F1F1` – Bakgrund  
+-  `#33474F` – Text  
+-  `#427E94`  
+-  `#1D9FCF`  
+-  `#38AAD5`  
+-  `#8ECFE7`  
+-  `#F1F1F1` – Bakgrund  
 
 ---
 
-## 🔤 Typsnitt
+## Typsnitt
 - **Rubrik:** Dosis  
 - **Brödtext:** Roboto  
 
 ---
 
-## 🎨 Stil
+## Stil
 - Ren, modern, mobilanpassad  
 - Fokus på **CTA**  
 - Illustrera bilder på ett modernt sätt  
 
 ---
 
-## 📊 Status
+## Status
 - ✅ Repo skapat  
 - 🔄 Layout och UI plan påbörjad  
 - 🔄 Sektionstruktur plan påbörjad  
