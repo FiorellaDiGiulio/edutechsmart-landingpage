@@ -1,0 +1,27 @@
+/* 🎨 Färgpalett
+#33474F – Text
+#427E94
+#1D9FCF
+#38AAD5
+#8ECFE7
+#F1F1F1 – Bakgrund */
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #F1F1F1;
+}
+
+h1, h2, h3, h4, p {
+  background-color: #33474F;
+
+}
+
+footer {
+    height: auto;
+    justify-items: center;
+    background-color: #8ECFE7;
+}
