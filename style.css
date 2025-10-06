@@ -332,44 +332,9 @@ header .cta-btn:hover {
 }
 
 
-footer {
-    height: auto;
-    justify-items: center;
-    font-size: 15px;
-}
 
-.footer-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
-  grid-area: "box1 box2 box3";
-  background-color: white;
-  padding: 10px;
-  gap:20px;
-  font-size:12px;
-}
 
-.footer-box1 {
-  display: block;
-  grid-column: 1;
-  box-shadow: 1 2 3 #33474F;;
-}
-.footer-box2 {
-  display: wrap;
-  grid-column: 2;
-}
-.footer-box3 {
-  grid-column: 3;
-}
-footer p {
-  height: auto;
-  font-size: 12px;
-}
-footer h3 {
-  background-color: white;
-  display: flex;
-  font-size: 20px;
-}
+
 
 /* Kontaktformulär */
 .contact-form-section {
@@ -437,13 +402,55 @@ footer h3 {
   background: var(--blue-2);
 }
 
+
+
+
+/* Footer */
+footer {
+    height: auto;
+    justify-items: center;
+    font-size: 15px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-area: "box1 box2 box3";
+  padding: 10px;
+  gap:20px;
+  font-size:12px;
+}
+
+.footer-box1 {
+  display: block;
+  grid-column: 1;
+  box-shadow: 1 2 3 #33474F;;
+}
+.footer-box2 {
+  display: wrap;
+  grid-column: 2;
+}
+.footer-box3 {
+  grid-column: 3;
+}
+footer p {
+  height: auto;
+  font-size: 12px;
+}
+footer h3 {
+  background-color: white;
+  display: flex;
+  font-size: 20px;
+}
+
 /* Responsivt */
 @media (max-width: 480px) {
   .contact-form-section {
     padding: 1.5rem 1.5rem;
     margin: 2rem 1rem 4rem;
   }
-
+  
   .contact-form button {
     font-size: 1rem;
     padding: 0.65rem 1rem;
