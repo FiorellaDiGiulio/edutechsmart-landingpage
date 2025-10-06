@@ -410,6 +410,7 @@ footer {
     height: auto;
     justify-items: center;
     font-size: 15px;
+    text-align: center;
 }
 
 .footer-container {
@@ -418,14 +419,16 @@ footer {
   grid-template-rows: auto auto auto;
   grid-area: "box1 box2 box3";
   padding: 10px;
-  gap:20px;
+  gap:30px;
   font-size:12px;
+
 }
 
 .footer-box1 {
   display: block;
   grid-column: 1;
-  box-shadow: 1 2 3 #33474F;;
+  box-shadow: 1 2 3 #33474F;
+
 }
 .footer-box2 {
   display: wrap;
@@ -437,11 +440,12 @@ footer {
 footer p {
   height: auto;
   font-size: 12px;
+  justify-content: center;
 }
 footer h3 {
-  background-color: white;
   display: flex;
   font-size: 20px;
+  justify-content: center;
 }
 
 /* Responsivt */
