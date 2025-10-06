@@ -105,7 +105,6 @@ header .cta-btn:hover {
   padding: 10px;
   border-radius: 5px;
   z-index: 15;
-  border: 1px solid var(--blue-1)
 }
 
 #menu a {
@@ -122,6 +121,20 @@ header .cta-btn:hover {
 
 #menu.active {
   display: flex;
+}
+
+/* Mobilanpassad: border på hela meny */
+@media (max-width: 768px) {
+  #menu {
+    border: 1px solid var(--text-dark); /* border på mobil */
+  }
+}
+
+/* Desktop: ingen border */
+@media (min-width: 769px) {
+  #menu {
+    border: none; /* tar bort border på desktop */
+  }
 }
 
 /* Hero */
