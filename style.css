@@ -27,12 +27,14 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.5em;
 }
 
-/* Header */
+/*mobilanpassad*/
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 3rem;
+  flex-direction: row;
+  padding: 1rem 1.5rem;
   position: relative;
   z-index: 10;
 }
@@ -40,14 +42,58 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .logo-img {
-  height: 40px;
+  height: 30px;
 }
 
-/* Meny (hamburger / mobil) */
+header nav a {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+header .cta-btn {
+  background: var(--text-dark);
+  color: white !important;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+header .cta-btn:hover {
+  background: var(--blue-4);
+  color: var(--text-dark);
+}
+
+/* Hamburger */
+#hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+}
+
+#hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: var(--text-dark);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
 #menu {
   display: none;
   flex-direction: column;
@@ -77,66 +123,118 @@ header {
   display: flex;
 }
 
-/* CTA-knapp */
-header .cta-btn {
-  background: var(--text-dark);  
-  color: white !important;      /* säkerställ vit text även på mobil */
-  border: none;                
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-header .cta-btn:hover {
-  background: var(--blue-4);
-  color: var(--text-dark);
-}
-
 /* Hero */
 .hero {
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 4rem 1rem;
   position: relative;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
 .hero p {
-  max-width: 600px;
+  max-width: 90%;
   margin: 1rem auto 2rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--blue-1);
 }
 
-/* Hamburger-meny - mobil först */
-#hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 25px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 20;
-}
 
-#hamburger span {
+/* Hero CTA-knappar - mobil */
+.hero .btn-primary,
+.hero .btn-secondary {
   display: block;
-  height: 3px;
-  width: 100%;
-  background: var(--text-dark);
-  border-radius: 2px;
-  transition: all 0.3s;
+  width: 90%;         /* lite mindre än full bredd */
+  max-width: 250px;   /* begränsa storleken */
+  margin: 1rem auto;  /* centrerade under bilden */
+  padding: 0.5rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background 0.3s;
 }
 
-@media (min-width: 763px) {
+.hero .btn-primary {
+  background: var(--text-dark);
+  color: white;
+}
+
+.hero .btn-primary:hover {
+  background: var(--blue-4);
+}
+
+.hero .btn-secondary {
+  background: var(--blue-2);
+  color: white;
+}
+
+.hero .btn-secondary:hover {
+  background: var(--blue-4);
+}
+
+/* Hero images - mobile first */
+.hero-images {
+  position: relative;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.tablet {
+  max-width: 250px; /* mindre på mobil */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.floating-img {
+  position: absolute; /* behåll position */
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* Dölj bottenbilder på mobil */
+@media (max-width: 768px) {
+  .img-left-top,
+  .img-left-bottom,
+  .img-right-top,
+  .img-right-bottom {
+    display: none;
+  }
+}
+
+/* störreskärm */
+@media (min-width: 769px) {
+
+  /* Header */
+  header {
+    padding: 1.5rem 3rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  header nav a {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+
+  header .cta-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
   #menu {
     display: flex;
     flex-direction: row;
@@ -146,186 +244,58 @@ header .cta-btn:hover {
     padding: 0;
   }
 
-  #menu a {
-    padding: 0 10px;
-  }
-
-  #hamburger {
-    display: none;
-  }
-}
-
-/*  Bilder */
-.hero-images {
-  position: relative;
-  display: inline-block;
-  margin-top: 3rem;
-}
-
-.tablet {
-  max-width: 400px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-/* Flytande bilder */
-.floating-img {
-  position: absolute;
-  width: 150px;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-}
-
-.img-left-top {
-  left: -180px;
-  top: -30px;
-}
-
-.img-left-bottom {
-  left: -180px;
-  bottom: -20px;
-}
-
-.img-right-top {
-  right: -180px;
-  top: -30px;
-}
-
-.img-right-bottom {
-  right: -180px;
-  bottom: -20px;
-}
-
-/*  CTA-knapp  */
-.hero .btn-primary {
-  background: var(--text-dark);
-  color: white;
-  padding: 0.5rem 1rem; 
-  border-radius: 12px;
-  font-size: 1rem; 
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s;
-  display: inline-block;
-  margin-top: 1.5rem;
-  text-align: center;
-}
-
-.btn-secondary {
-  background: var(--blue-2);
-  color: white;
-  padding: 0.5rem 1rem; 
-  border-radius: 12px;
-  font-size: 1rem; 
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s;
-  display: inline-block;
-  margin-top: 1.5rem;
-  text-align: center;
-}
-
-.hero .btn-primary:hover {
-  background: var(--blue-4);
-}
-
-.hero .btn-secondary:hover {
-  background: var(--blue-4);
-}
-
-/* Responsiv design */
-@media (max-width: 1024px) {
-  header {
-    padding: 1rem 2rem;
-  }
-
-  header nav a {
-    margin-left: 1rem;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  header nav {
-    margin-top: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
+  /* Hero */
   .hero {
-    padding: 4rem 1.5rem;
+    padding: 6rem 2rem;
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .hero p {
-    font-size: 1rem;
+    max-width: 600px;
+    font-size: 1.1rem;
   }
 
+  /* Hero CTA-knappar - desktop */
+  .hero .btn-primary,
+  .hero .btn-secondary {
+    width: auto;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  /* Hero images */
   .tablet {
-    max-width: 300px;
+    max-width: 400px;
   }
 
   .floating-img {
-    width: 100px;
+    width: 150px;
   }
 
-  .img-left-top,
-  .img-left-bottom,
-  .img-right-top,
+  .img-left-top {
+    left: -180px;
+    top: -30px;
+  }
+
+  .img-left-bottom {
+    left: -180px;
+    bottom: -20px;
+  }
+
+  .img-right-top {
+    right: -180px;
+    top: -30px;
+  }
+
   .img-right-bottom {
-    position: static;
-    display: block;
-    margin: 1rem auto;
-  }
-
-  .hero-images {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    right: -180px;
+    bottom: -20px;
   }
 }
-
-@media (max-width: 480px) {
-  header {
-    padding: 1rem;
-  }
-
-  .logo-img {
-    height: 30px;
-  }
-
-  header nav a {
-    font-size: 0.9rem;
-  }
-
-  .hero h1 {
-    font-size: 1.6rem;
-  }
-
-  .hero p {
-    font-size: 0.95rem;
-  }
-
-  .btn-primary {
-    width: 100%;
-    padding: 0.8rem;
-  }
-}
-
-
-
 
 /* Kontaktformulär */
 .contact-form-section {
