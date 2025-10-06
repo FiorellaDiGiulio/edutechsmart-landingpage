@@ -439,6 +439,16 @@ header .cta-btn:hover {
   color: var(--text-dark);
 }
 
+
+
+
+
+
+
+
+
+
+
 .testimonial-container {
   display: flex;
   flex-direction: column;
@@ -489,7 +499,10 @@ footer {
   font-size: 15px;
   text-align: center;
 }
-
+.footer-container h3 {
+border: white 2px solid;
+border-radius: 30px;
+}
 @media (min-width: 700px) {
 .footer-container {
   display: grid;
