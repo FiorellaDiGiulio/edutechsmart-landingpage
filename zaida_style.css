@@ -37,16 +37,16 @@ footer {
   font-size:12px;
 }
 
-.box1 {
+.footer-box1 {
   display: block;
   grid-column: 1;
   box-shadow: 1 2 3 #33474F;;
 }
-.box2 {
+.footer-box2 {
   display: wrap;
   grid-column: 2;
 }
-.box3 {
+.footer-box3 {
   grid-column: 3;
 }
 footer p {
