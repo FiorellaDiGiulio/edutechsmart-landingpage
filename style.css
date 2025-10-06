@@ -332,9 +332,9 @@ header .cta-btn:hover {
 /* Kontaktformulär */
 .contact-form-section {
   background: rgba(241, 241, 241, 0.5);
-  max-width: 400px;
-  margin: 6rem auto 2rem;
-  padding: 2rem 6rem;
+  max-width: 500px;        /* Bredare */
+  margin: 3rem auto 1.5rem; /* Mindre topp- och bottenmarginal */
+  padding: 1.5rem 6rem;    /* Mindre padding, gör boxen inte så hög */
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(50, 50, 93, 0.1);
   font-family: 'Roboto', sans-serif;
@@ -343,7 +343,7 @@ header .cta-btn:hover {
 
 .contact-form-section h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.2rem;     /* Mindre mellanrubrik */
   font-weight: 700;
   font-family: 'Dosis', sans-serif;
   color: var(--blue-1);
@@ -351,7 +351,7 @@ header .cta-btn:hover {
 
 .contact-form label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;   /* Mindre mellanrum till input */
   font-weight: 500;
 }
 
@@ -359,8 +359,8 @@ header .cta-btn:hover {
 .contact-form input[type="email"],
 .contact-form textarea {
   width: 100%;
-  padding: 0.8rem 1rem;
-  margin-bottom: 1.2rem;
+  padding: 0.5rem .75rem; /* Mindre padding inuti fält */
+  margin-bottom: 0.8rem;   /* Mindre mellanrum mellan fälten */
   border: 1.5px solid var(--blue-4);
   border-radius: 8px;
   font-size: 1rem;
@@ -381,18 +381,32 @@ header .cta-btn:hover {
   background: var(--text-dark);
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.1rem;
+  padding: 0.5rem 1rem;    /* Mindre knapp */
+  font-size: 1rem;
   border-radius: 12px;
   cursor: pointer;
   font-weight: 600;
   transition: background 0.3s ease;
   display: block;
   width: 100%;
+  margin-top: 0.5rem;
 }
 
 .contact-form button:hover {
   background: var(--blue-2);
+}
+
+/* Responsivt */
+@media (max-width: 480px) {
+  .contact-form-section {
+      padding: 1rem 1rem;
+      margin: 2rem 1rem 3rem;
+  }
+
+  .contact-form button {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+  }
 }
 
 
