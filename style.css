@@ -65,7 +65,7 @@ header .cta-btn {
 }
 
 header .cta-btn:hover {
-  background: var(--blue-2);
+  background: var(--blue-4);
 }
 
 .hero {
@@ -142,8 +142,26 @@ header .cta-btn:hover {
   text-align: center;
 }
 
+.hero .btn-secondary  {
+background: var(--blue-1);
+  color: white;
+  padding: 0.5rem 1rem; 
+  border-radius: 12px;
+  font-size: 1rem; 
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+  display: inline-block;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
 .hero .btn-primary:hover {
-  background: var(--blue-2);
+  background: var(--blue-4);
+}
+
+.hero .btn-secondary:hover {
+  background: var(--blue-4);
 }
 
 /* Responsiv design */
