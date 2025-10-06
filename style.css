@@ -1,7 +1,7 @@
-/* Importera Google Fonts */
+/* === Google Fonts === */
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500;700&family=Roboto:wght@300;400;500&display=swap');
 
-/* Färgpalett */
+/*  Färgpalett */
 :root {
   --text-dark: #33474F;  
   --blue-1: #427E94;
@@ -26,7 +26,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.5em;
 }
 
-/* Nav */
 header {
   display: flex;
   justify-content: space-between;
@@ -69,7 +68,6 @@ header .cta-btn:hover {
   background: var(--blue-2);
 }
 
-/* Hero */
 .hero {
   text-align: center;
   padding: 6rem 2rem;
@@ -129,7 +127,7 @@ header .cta-btn:hover {
   bottom: -20px;
 }
 
-/* CTA */
+/* CTA-knapp */
 .hero .btn-primary {
   background: var(--text-dark);
   color: white;
@@ -137,10 +135,104 @@ header .cta-btn:hover {
   border-radius: 12px;
   font-size: 1rem; 
   font-weight: 600;
-  display: inline-block; 
-  margin-top: 1.5rem; 
   text-decoration: none;
   transition: background 0.3s;
-  text-align: center; 
-  display: block;
+  display: inline-block;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.hero .btn-primary:hover {
+  background: var(--blue-2);
+}
+
+/* responsiv design */
+@media (max-width: 1024px) {
+  header {
+    padding: 1rem 2rem;
+  }
+
+  header nav a {
+    margin-left: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .hero {
+    padding: 4rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .tablet {
+    max-width: 300px;
+  }
+
+  .floating-img {
+    width: 100px;
+  }
+
+  .img-left-top,
+  .img-left-bottom,
+  .img-right-top,
+  .img-right-bottom {
+    position: static;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  .hero-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1rem;
+  }
+
+  .logo-img {
+    height: 30px;
+  }
+
+  header nav a {
+    font-size: 0.9rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 0.8rem;
+  }
 }
