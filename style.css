@@ -381,7 +381,7 @@ header .cta-btn:hover {
   background: var(--text-dark);
   color: white;
   border: none;
-  padding: 0.5rem 1rem;    /* Mindre knapp */
+  padding: 0.5rem 16.5rem;    /* Mindre knapp */
   font-size: 1rem;
   border-radius: 12px;
   cursor: pointer;
