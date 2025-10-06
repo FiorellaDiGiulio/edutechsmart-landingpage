@@ -136,8 +136,6 @@ header .cta-btn:hover {
   transition: all 0.3s;
 }
 
-
-/* Större skärmar */
 @media (min-width: 763px) {
   #menu {
     display: flex;
