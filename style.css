@@ -1,4 +1,4 @@
-/* === Google Fonts === */
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500;700&family=Roboto:wght@300;400;500&display=swap');
 
 /*  Färgpalett */
@@ -137,9 +137,9 @@ header .cta-btn:hover {
   font-weight: 600;
   text-decoration: none;
   transition: background 0.3s;
-  display: inline-block;
   margin-top: 1.5rem;
   text-align: center;
+  display: inline-block;
 }
 
 .hero .btn-primary:hover {
