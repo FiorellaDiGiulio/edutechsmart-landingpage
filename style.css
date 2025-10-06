@@ -439,15 +439,3 @@ footer h3 {
   font-size: 20px;
 }
 
-/* Responsivt */
-@media (max-width: 480px) {
-  .contact-form-section {
-    padding: 1.5rem 1.5rem;
-    margin: 2rem 1rem 4rem;
-  }
-  
-  .contact-form button {
-    font-size: 1rem;
-    padding: 0.65rem 1rem;
-  }
-}
