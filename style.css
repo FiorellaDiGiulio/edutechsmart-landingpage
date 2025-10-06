@@ -363,7 +363,7 @@ header .cta-btn:hover {
   background: var(--text-dark);
   color: white;
   border: none;
-  padding: 0.5rem 16.5rem;
+  padding: 0.5rem 1rem; 
   font-size: 1rem;
   border-radius: 12px;
   cursor: pointer;
@@ -372,6 +372,9 @@ header .cta-btn:hover {
   display: block;
   width: 100%;
   margin-top: 0.5rem;
+  width: 90%; 
+  max-width: 250px; 
+  margin: 1rem auto;
 }
 
 .contact-form button:hover {
