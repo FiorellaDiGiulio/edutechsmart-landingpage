@@ -405,6 +405,9 @@ footer {
     text-align: center;
 }
 
+
+
+@media (min-width: 700px) {
 .footer-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -438,4 +441,4 @@ footer h3 {
   font-size: 20px;
   justify-content: center;
 }
-
+}
