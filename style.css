@@ -11,6 +11,7 @@
   --background: #F1F1F1; 
 }
 
+/* Grundstil */
 body {
   margin: 0;
   padding: 0;
@@ -26,11 +27,14 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.5em;
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 3rem;
+  position: relative;
+  z-index: 10;
 }
 
 .logo {
@@ -68,6 +72,7 @@ header .cta-btn:hover {
   background: var(--blue-4);
 }
 
+/* Hero */
 .hero {
   text-align: center;
   padding: 6rem 2rem;
@@ -84,6 +89,77 @@ header .cta-btn:hover {
   margin: 1rem auto 2rem;
   font-size: 1.1rem;
   color: var(--blue-1);
+}
+
+/* Hamburger-meny - mobil först */
+#hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+}
+
+#hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+#menu {
+  display: none;
+  flex-direction: column;
+  background-color: #cba3db;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 15;
+}
+
+#menu a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 0;
+  display: block;
+  transition: background 0.3s;
+}
+
+#menu a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+#menu.active {
+  display: flex;
+}
+
+/* Större skärmar */
+@media (min-width: 763px) {
+  #menu {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    width: auto;
+    padding: 0;
+  }
+
+  #menu a {
+    padding: 0 10px;
+  }
+
+  #hamburger {
+    display: none;
+  }
 }
 
 /*  Bilder */
@@ -142,8 +218,8 @@ header .cta-btn:hover {
   text-align: center;
 }
 
-.hero .btn-secondary  {
-background: var(--blue-1);
+.btn-secondary {
+  background: var(--blue-2);
   color: white;
   padding: 0.5rem 1rem; 
   border-radius: 12px;
