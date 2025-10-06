@@ -47,29 +47,52 @@ header {
   height: 40px;
 }
 
-header nav a {
-  margin-left: 2rem;
+/* Meny (hamburger / mobil) */
+#menu {
+  display: none;
+  flex-direction: column;
+  background-color: var(--blue-4);
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 15;
+}
+
+#menu a {
+  color: var(--blue-1);
   text-decoration: none;
-  font-weight: 500;
-  color: var(--text-dark);
-  transition: color 0.3s;
+  padding: 8px 0;
+  display: block;
+  transition: background 0.3s, color 0.3s;
 }
 
-header nav a:hover {
-  color: var(--blue-2);
+#menu a:hover {
+  background: rgba(255,255,255,0.2);
 }
 
+#menu.active {
+  display: flex;
+}
+
+/* CTA-knapp */
 header .cta-btn {
-  background: var(--text-dark);
-  color: white;
+  background: var(--text-dark);  
+  color: white !important;      /* säkerställ vit text även på mobil */
+  border: none;                
   padding: 0.6rem 1.2rem;
-  border-radius: 9999px;
+  border-radius: 4px;
   font-weight: 600;
-  transition: background 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 header .cta-btn:hover {
   background: var(--blue-4);
+  color: var(--text-dark);
 }
 
 /* Hero */
@@ -108,39 +131,11 @@ header .cta-btn:hover {
   display: block;
   height: 3px;
   width: 100%;
-  background: white;
+  background: var(--text-dark);
   border-radius: 2px;
   transition: all 0.3s;
 }
 
-#menu {
-  display: none;
-  flex-direction: column;
-  background-color: #cba3db;
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  width: 200px;
-  padding: 10px;
-  border-radius: 5px;
-  z-index: 15;
-}
-
-#menu a {
-  color: white;
-  text-decoration: none;
-  padding: 8px 0;
-  display: block;
-  transition: background 0.3s;
-}
-
-#menu a:hover {
-  background: rgba(255,255,255,0.2);
-}
-
-#menu.active {
-  display: flex;
-}
 
 /* Större skärmar */
 @media (min-width: 763px) {
