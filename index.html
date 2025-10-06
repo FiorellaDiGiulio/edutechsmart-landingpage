@@ -1,101 +1,175 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EduTechSmart</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduTechSmart</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Header / Nav -->
+    <header>
+      <div class="logo">
+        <img src="images/logo.png" alt="EduTechSmart Logo" class="logo-img" />
+      </div>
 
-  <!-- Header / Nav -->
-  <header>
-    <div class="logo">
-      <img src="images/logo.png" alt="EduTechSmart Logo" class="logo-img">
+      <!-- Hamburgarknapp (mobil) -->
+      <button id="hamburger" aria-label="Meny">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Meny -->
+      <nav id="menu">
+        <a href="#">Hem</a>
+        <a href="#">Om oss</a>
+        <a href="#">Vår tech</a>
+        <a href="#">Nyheter</a>
+        <a href="#" class="cta-btn">Kontakta oss</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1>HEALTHCARE EDUCATION</h1>
+      <p>
+        Interaktiv hälsovårdsutbildning med digitala lösningar som gör lärandet
+        enklare och mer engagerande.
+      </p>
+
+      <div class="hero-images">
+        <!-- Stortbild -->
+        <img src="images/bild1.png" alt="Tablet" class="tablet" />
+
+        <!-- Flytande småbilder -->
+        <img
+          src="images/bild1.png"
+          alt="Bild 1"
+          class="floating-img img-left-top"
+        />
+        <img
+          src="images/bild1.png"
+          alt="Bild 2"
+          class="floating-img img-left-bottom"
+        />
+        <img
+          src="images/bild1.png"
+          alt="Bild 3"
+          class="floating-img img-right-top"
+        />
+        <img
+          src="images/bild1.png"
+          alt="Bild 4"
+          class="floating-img img-right-bottom"
+        />
+      </div>
+
+      <div>
+        <a href="#" class="btn-primary">Kontakta oss</a>
+        <a href="#" class="btn-secondary">Demo</a>
+      </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="cards">
+      <div class="card">
+        <h3>Inga klassrum behövs</h3>
+        <p>
+          Vår utbildningsmetodik är utformad för enkel och smidig tillgång och
+          integrerar sömlöst ett brett utbud av funktioner, inklusive
+          scenariobaserad träning, videoinnehåll, 3D-animationer och moderna
+          utvärderingstekniker - allt förstärkt av AI.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Expertis i varje steg</h3>
+        <p>
+          EduTechSmart bygger på decennier av expertis inom vård, IT, spel och
+          utbildning, allt berikat av den senaste AI-utvecklingen. Våra kurser
+          skapas av erfarna yrkespersoner med djup kunskap om branschstandarder,
+          regler och riktlinjer. Vi prioriterar att alltid vara i linje med
+          lokala normer och bästa praxis.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Fördelar</h3>
+        <div>
+          <ul>
+            <li>Kostnadseffektivt</li>
+            <li>Användarvänlig planering</li>
+            <li>Upprepningsbara moduler</li>
+            <li>Tillgängligt dygnet runt</li>
+            <li>Scenariobaserat lärande</li>
+            <li>Lokalanpassat på över 20 språk</li>
+            <li>Anpassningsbara karaktärer och miljöer</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="contact-form-section">
+      <h2>Kontakta oss</h2>
+      <form action="#" method="post" class="contact-form">
+        <label for="name">Namn</label>
+        <input type="text" id="name" name="name" required />
+        
+        <label for="email">E-post</label>
+        <input type="email" id="email" name="email" required />
+        
+        <label for="message">Meddelande</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        
+        <button type="submit" class="btn-primary">Skicka</button>
+      </form>
+    </section>
+    
+    <section class="testimonials">
+  <h2>Vad våra användare säger</h2>
+  <div class="testimonial-container">
+    <div class="testimonial">
+      <p>“EduTechSmart har verkligen gjort vår utbildning mer interaktiv och effektiv!”</p>
+      <h4>— Anna Svensson, Sjuksköterska</h4>
     </div>
-
-    <!-- Hamburgarknapp (mobil) -->
-    <button id="hamburger" aria-label="Meny">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Meny -->
-    <nav id="menu">
-      <a href="#">Hem</a>
-      <a href="#">Om oss</a>
-      <a href="#">Vår tech</a>
-      <a href="#">Nyheter</a>
-      <a href="#" class="cta-btn">Kontakta oss</a>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <h1>HEALTHCARE EDUCATION</h1>
-    <p>Interaktiv hälsovårdsutbildning med digitala lösningar som gör lärandet enklare och mer engagerande.</p>
-
-    <div class="hero-images">
-      <!-- Stortbild -->
-      <img src="images/bild1.png" alt="Tablet" class="tablet">
-
-      <!-- Flytande småbilder -->
-      <img src="images/bild1.png" alt="Bild 1" class="floating-img img-left-top">
-      <img src="images/bild1.png" alt="Bild 2" class="floating-img img-left-bottom">
-      <img src="images/bild1.png" alt="Bild 3" class="floating-img img-right-top">
-      <img src="images/bild1.png" alt="Bild 4" class="floating-img img-right-bottom">
+    <div class="testimonial">
+      <p>“En fantastisk plattform som förenklar lärandet inom vården. Rekommenderas!”</p>
+      <h4>— Johan Lindberg, Lärare</h4>
     </div>
-
-    <div>
-      <a href="#" class="btn-primary">Kontakta oss</a>
-      <a href="#" class="btn-secondary">Demo</a>
+    <div class="testimonial">
+      <p>“Våra studenter älskar den visuella upplevelsen och användarvänligheten.”</p>
+      <h4>— Maria Eriksson, Programansvarig</h4>
     </div>
-  </section>
-
-  <section class="contact-form-section">
-    <h2>Kontakta oss</h2>
-    <form action="#" method="post" class="contact-form">
-      <label for="name">Namn</label>
-      <input type="text" id="name" name="name" required>
-  
-      <label for="email">E-post</label>
-      <input type="email" id="email" name="email" required>
-  
-      <label for="message">Meddelande</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-  
-      <button type="submit" class="btn-primary">Skicka</button>
-    </form>
-  </section>
+  </div>
+</section>
 
     <!-- FOOTER -->
-     <footer>
-     <h3>Setting a new standard for learning</h3>
-    <div class="footer-container">
-      <div class="footer-box1">
-        <h3>OFFICE UMEÅ</h3>
-        <p>EduTech Smart Global AB</p>
-        <p>Industrivägen 12</p>
-        <p>901 30 Umeå</p>
-        <p>Sweden</p>
+    <footer>
+      <h3>Setting a new standard for learning</h3>
+      <div class="footer-container">
+        <div class="footer-box1">
+          <h3>OFFICE UMEÅ</h3>
+          <p>EduTech Smart Global AB</p>
+          <p>Industrivägen 12</p>
+          <p>901 30 Umeå</p>
+          <p>Sweden</p>
+        </div>
+        <div class="footer-box2">
+          <h3>OFFICE SKELLEFTEÅ</h3>
+          <p>EduTech Smart Global AB</p>
+          <p>Skellefteå Science City</p>
+          <p>Laboratorgränd 9</p>
+          <p>931 88 Skellefteå</p>
+          <p>Sweden</p>
+        </div>
+        <div class="footer-box3">
+          <h3>LINKS</h3>
+          <p>+46 73 40 00 345</p>
+          <p>info@edutechsmart.com</p>
+        </div>
       </div>
-      <div class="footer-box2">
-        <h3>OFFICE SKELLEFTEÅ</h3>
-        <p>EduTech Smart Global AB</p>
-        <p>Skellefteå Science City</p>
-        <p>Laboratorgränd 9</p>
-        <p>931 88 Skellefteå</p>
-        <p>Sweden</p>
-      </div>
-      <div class="footer-box3">
-        <h3>LINKS</h3>
-        <p>+46 73 40 00 345</p>
-        <p>info@edutechsmart.com</p>
-      </div>
-    </div>
       <p>© 2025 EduTechSmart Global</p>
-   </footer> 
-</body>
+    </footer>
+  </body>
 </html>
