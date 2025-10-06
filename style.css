@@ -491,16 +491,17 @@ footer {
 }
 
 @media (min-width: 700px) {
-  .footer-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-area: "box1 box2 box3";
-    padding: 20px;
-    gap: 50px 50px;
-    font-size: 12px;
-    width: 80vw;
-  }
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-area: "box1 box2 box3";
+  padding: 20px;
+  gap:50px 50px;
+  font-size:12px;
+  width: 80vw;
+
+}
 
   .footer-box1 {
     display: block;
