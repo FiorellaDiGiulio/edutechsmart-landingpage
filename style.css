@@ -58,14 +58,20 @@ header nav a {
   margin-left: 0.5rem;
   font-size: 0.9rem;
   text-decoration: none;
-  color: var(--text-dark);
+  padding: 8px 0;
+  display: block;
+  transition: background 0.3s, color 0.3s;
+}
+
+#menu a:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 header .cta-btn {
   background: var(--text-dark);
-  color: white !important;
+  color: white !important; /* säkerställ vit text även på mobil */
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
@@ -110,6 +116,7 @@ header .cta-btn:hover {
   padding: 10px;
   border-radius: 5px;
   z-index: 15;
+  border: 1px solid var(--blue-1);
 }
 
 #menu a {
@@ -126,26 +133,6 @@ header .cta-btn:hover {
 
 #menu.active {
   display: flex;
-}
-
-/* CTA-knapp */
-header .cta-btn {
-  background: var(--text-dark);
-  color: white !important; /* säkerställ vit text även på mobil */
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-/* Desktop: ingen border */
-@media (min-width: 769px) {
-  #menu {
-    border: none; /* tar bort border på desktop */
-  }
 }
 
 /* Hero */
@@ -183,37 +170,81 @@ header .cta-btn {
   transition: background 0.3s;
 }
 
-#menu {
-  display: none;
-  flex-direction: column;
-  background-color: #cba3db;
-  position: absolute;
-  top: 60px;
-  right: 20px;
-  width: 200px;
-  padding: 10px;
-  border-radius: 5px;
-  z-index: 15;
-}
-
-#menu a {
+.hero .btn-primary {
+  background: var(--text-dark);
   color: white;
-  text-decoration: none;
-  padding: 8px 0;
-  display: block;
-  transition: background 0.3s;
 }
 
-#menu a:hover {
-  background: rgba(255, 255, 255, 0.2);
+.hero .btn-primary:hover {
+  background: var(--blue-4);
 }
 
-#menu.active {
-  display: flex;
+.hero .btn-secondary {
+  background: var(--blue-2);
+  color: white;
 }
 
-/* Större skärmar */
-@media (min-width: 763px) {
+.hero .btn-secondary:hover {
+  background: var(--blue-4);
+}
+
+/* Hero images - mobile first */
+.hero-images {
+  position: relative;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.tablet {
+  max-width: 250px; /* mindre på mobil */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.floating-img {
+  position: absolute; /* behåll position */
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Dölj bottenbilder på mobil */
+@media (max-width: 768px) {
+  .img-left-top,
+  .img-left-bottom,
+  .img-right-top,
+  .img-right-bottom {
+    display: none;
+  }
+}
+
+/* störreskärm */
+@media (min-width: 769px) {
+  /* Header */
+  header {
+    padding: 1.5rem 3rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
+
+  header nav a {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+
+  header .cta-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
   #menu {
     display: flex;
     flex-direction: row;
@@ -223,51 +254,62 @@ header .cta-btn {
     padding: 0;
   }
 
-  #menu a {
-    padding: 0 10px;
+  /* Hero */
+  .hero {
+    padding: 6rem 2rem;
   }
 
-  #hamburger {
-    display: none;
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    max-width: 600px;
+    font-size: 1.1rem;
+  }
+
+  /* Hero CTA-knappar - desktop */
+  .hero .btn-primary,
+  .hero .btn-secondary {
+    width: auto;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  /* Hero images */
+  .tablet {
+    max-width: 400px;
+  }
+
+  /* Flytande bilder */
+  .floating-img {
+    position: absolute;
+    width: 150px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .img-left-top {
+    left: -180px;
+    top: -30px;
+  }
+
+  .img-left-bottom {
+    left: -180px;
+    bottom: -20px;
+  }
+
+  .img-right-top {
+    right: -180px;
+    top: -30px;
+  }
+
+  .img-right-bottom {
+    right: -180px;
+    bottom: -20px;
   }
 }
-
-/*  Bilder */
-.hero-images {
-  position: relative;
-  display: inline-block;
-  margin-top: 3rem;
-}
-
-.tablet {
-  max-width: 400px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Flytande bilder */
-.floating-img {
-  position: absolute;
-  width: 150px;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-}
-
-.img-left-top {
-  left: -180px;
-  top: -30px;
-}
-
-.img-left-bottom {
-  left: -180px;
-  bottom: -20px;
-}
-
-.img-right-top {
-  right: -180px;
-  top: -30px;
-}
-
 .img-right-bottom {
   right: -180px;
   bottom: -20px;
@@ -339,54 +381,38 @@ header .cta-btn {
   }
 
   .hero {
-    padding: 6rem 2rem;
+    padding: 4rem 1.5rem;
   }
 
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .hero p {
-    max-width: 600px;
-    font-size: 1.1rem;
-  }
-
-  /* Hero CTA-knappar - desktop */
-  .hero .btn-primary,
-  .hero .btn-secondary {
-    width: auto;
-    padding: 0.5rem 1rem;
     font-size: 1rem;
-    margin-top: 1.5rem;
   }
 
-  /* Hero images */
   .tablet {
-    max-width: 400px;
+    max-width: 300px;
   }
 
   .floating-img {
-    width: 150px;
+    width: 100px;
   }
 
-  .img-left-top {
-    left: -180px;
-    top: -30px;
-  }
-
-  .img-left-bottom {
-    left: -180px;
-    bottom: -20px;
-  }
-
-  .img-right-top {
-    right: -180px;
-    top: -30px;
-  }
-
+  .img-left-top,
+  .img-left-bottom,
+  .img-right-top,
   .img-right-bottom {
-    right: -180px;
-    bottom: -20px;
+    position: static;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  .hero-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
