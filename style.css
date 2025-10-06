@@ -503,6 +503,7 @@ footer {
 border: white 2px solid;
 border-radius: 30px;
 }
+
 @media (min-width: 700px) {
 .footer-container {
   display: grid;
