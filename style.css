@@ -327,6 +327,80 @@ header .cta-btn:hover {
 }
 
 
+
+
+
+
+/* Kontaktformulär */
+.contact-form-section {
+  background: rgba(241, 241, 241, 0.5);
+  max-width: 400px;
+  margin: 6rem auto 2rem;
+  padding: 2rem 6rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(50, 50, 93, 0.1);
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-dark);
+}
+
+.contact-form-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-family: 'Dosis', sans-serif;
+  color: var(--blue-1);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.2rem;
+  border: 1.5px solid var(--blue-4);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--blue-2);
+  box-shadow: 0 0 8px var(--blue-2);
+}
+
+.contact-form button {
+  background: var(--text-dark);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  display: block;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background: var(--blue-2);
+}
+
+
+
+
+/* Footer */
 footer {
     height: auto;
     justify-items: center;
@@ -338,7 +412,6 @@ footer {
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
   grid-area: "box1 box2 box3";
-  background-color: white;
   padding: 10px;
   gap:20px;
   font-size:12px;
@@ -364,4 +437,17 @@ footer h3 {
   background-color: white;
   display: flex;
   font-size: 20px;
+}
+
+/* Responsivt */
+@media (max-width: 480px) {
+  .contact-form-section {
+    padding: 1.5rem 1.5rem;
+    margin: 2rem 1rem 4rem;
+  }
+  
+  .contact-form button {
+    font-size: 1rem;
+    padding: 0.65rem 1rem;
+  }
 }
