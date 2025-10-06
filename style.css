@@ -1,7 +1,7 @@
-/* Google Fonts */
+/* Google Fonts  */
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500;700&family=Roboto:wght@300;400;500&display=swap');
 
-/*  Färgpalett */
+/* Färgpalett */
 :root {
   --text-dark: #33474F;  
   --blue-1: #427E94;
@@ -86,7 +86,7 @@ header .cta-btn:hover {
   color: var(--blue-1);
 }
 
-/* Bilder */
+/*  Bilder */
 .hero-images {
   position: relative;
   display: inline-block;
@@ -127,7 +127,7 @@ header .cta-btn:hover {
   bottom: -20px;
 }
 
-/* CTA-knapp */
+/*  CTA-knapp  */
 .hero .btn-primary {
   background: var(--text-dark);
   color: white;
@@ -137,16 +137,16 @@ header .cta-btn:hover {
   font-weight: 600;
   text-decoration: none;
   transition: background 0.3s;
+  display: inline-block;
   margin-top: 1.5rem;
   text-align: center;
-  display: inline-block;
 }
 
 .hero .btn-primary:hover {
   background: var(--blue-2);
 }
 
-/* responsiv design */
+/* Responsiv design */
 @media (max-width: 1024px) {
   header {
     padding: 1rem 2rem;
