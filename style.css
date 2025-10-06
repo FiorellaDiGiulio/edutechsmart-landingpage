@@ -405,8 +405,6 @@ footer {
     text-align: center;
 }
 
-
-
 @media (min-width: 700px) {
 .footer-container {
   display: grid;
@@ -417,7 +415,6 @@ footer {
   gap:50px 50px;
   font-size:12px;
   width: 80vw;
-
 }
 
 .footer-box1 {
