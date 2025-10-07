@@ -4,7 +4,7 @@
 /* Färgpalett */
 :root {
   --text-dark: #33474f;
-  --blue-1: #427e94;
+  --blue-1: #33677a;
   --blue-2: #1d9fcf;
   --blue-3: #38aad5;
   --blue-4: #8ecfe7;
@@ -73,7 +73,7 @@ header .cta-btn {
 }
 
 header .cta-btn:hover {
-  background: var(--blue-4);
+  background: var(--text-dark);
   color: var(--text-dark);
 }
 
@@ -187,7 +187,7 @@ header .cta-btn:hover {
 }
 
 .hero .btn-secondary {
-  background: var(--blue-2);
+  background: var(--blue-1);
   color: white;
 }
 
